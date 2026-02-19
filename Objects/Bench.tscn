@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://tqmb1cb6ywi1"]
+
+[ext_resource type="Texture2D" uid="uid://b8n1peyoo5eou" path="res://Sprites/Objects/Bench_1.png" id="1_qwlb0"]
+
+[node name="Penkki_collision" type="Node2D" unique_id=409978085]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=764731960]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1085168959]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_qwlb0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1703358735]
+position = Vector2(-61, -13)
+polygon = PackedVector2Array(1, 43, 1, 44, 121, 44, 121, 13, 1, 13)
