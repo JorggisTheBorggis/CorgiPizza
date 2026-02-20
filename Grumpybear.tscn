@@ -1,20 +1,14 @@
 [gd_scene format=3 uid="uid://c3um4f6c672ha"]
 
-[ext_resource type="Script" uid="uid://ckbmpsecatq60" path="res://grumpybear.gd" id="1_eypej"]
-[ext_resource type="Texture2D" uid="uid://c7fwedtpxo1i3" path="res://TEMP_tassu.png" id="1_x3gfj"]
+[ext_resource type="Script" uid="uid://ckbmpsecatq60" path="res://Dot GD/grumpybear.gd" id="1_eypej"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eypej"]
-size = Vector2(14.5, 21)
-
-[node name="Bear" type="Node2D" unique_id=2125894686]
+[node name="Bear_push" type="Node2D" unique_id=2125894686]
 script = ExtResource("1_eypej")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=767527954]
-texture_filter = 1
-texture = ExtResource("1_x3gfj")
+[node name="Body" type="Sprite2D" parent="." unique_id=458389726]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=343366523]
+[node name="Tassu" type="Sprite2D" parent="." unique_id=1301029044]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=530557573]
-position = Vector2(4, 0)
-shape = SubResource("RectangleShape2D_eypej")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tassu" unique_id=1531814117]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1539902247]

@@ -5,10 +5,9 @@
 
 [node name="Node2D" type="Node2D" unique_id=1113796000]
 
-[node name="Player" parent="." unique_id=1970807572 instance=ExtResource("1_gnif3")]
+[node name="Player" parent="." unique_id=1970807572 groups=["Player"] instance=ExtResource("1_gnif3")]
 z_index = 1
-position = Vector2(42, -44)
+position = Vector2(56, -104)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1744420665]
-
-[node name="Node2D" parent="." unique_id=1739605399 instance=ExtResource("2_gnif3")]
+[node name="Node2D" parent="." unique_id=1739605399 groups=["Player", "player"] instance=ExtResource("2_gnif3")]
+position = Vector2(-2, 1)

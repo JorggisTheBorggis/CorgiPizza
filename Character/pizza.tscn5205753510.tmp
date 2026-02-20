@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bdtd7f173qu3y"]
+
+[ext_resource type="Script" uid="uid://cetsbig36pjru" path="res://pizza.gd" id="1_y4erc"]
+[ext_resource type="Texture2D" uid="uid://c7fwedtpxo1i3" path="res://Sprites/Characters/TEMP_tassu.png" id="2_d1rpg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1aym"]
+radius = 14.035668
+
+[node name="PIZZA" type="Area2D" unique_id=435430462]
+script = ExtResource("1_y4erc")
+
+[node name="Slice" type="Sprite2D" parent="." unique_id=1870337095]
+position = Vector2(0, -2)
+texture = ExtResource("2_d1rpg")
+
+[node name="Blob" type="CollisionShape2D" parent="." unique_id=825002738 groups=["player"]]
+shape = SubResource("CircleShape2D_n1aym")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

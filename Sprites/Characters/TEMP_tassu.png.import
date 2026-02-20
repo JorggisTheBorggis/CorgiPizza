@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y8y4gtg3l2bl"
-path="res://.godot/imported/Mäki_asfaltti.png-5f1ceb3e509ba1586d0d0060f74d8f13.ctex"
+uid="uid://c7fwedtpxo1i3"
+path="res://.godot/imported/TEMP_tassu.png-3957a35c89f25dbf511478030b9707e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mäki_asfaltti.png"
-dest_files=["res://.godot/imported/Mäki_asfaltti.png-5f1ceb3e509ba1586d0d0060f74d8f13.ctex"]
+source_file="res://Sprites/Characters/TEMP_tassu.png"
+dest_files=["res://.godot/imported/TEMP_tassu.png-3957a35c89f25dbf511478030b9707e5.ctex"]
 
 [params]
 
