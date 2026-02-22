@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cgl4xm653t02e"]
+
+[ext_resource type="Script" uid="uid://dl7myb73qr3xu" path="res://Moving stuff/paw.gd" id="1_x5kbk"]
+[ext_resource type="Texture2D" uid="uid://c55y12b1xl8cf" path="res://icon.svg" id="2_hdt4y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6yhb"]
+size = Vector2(30.25, 23)
+
+[node name="Paw" type="CharacterBody2D" unique_id=1795908148]
+script = ExtResource("1_x5kbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=877141076]
+position = Vector2(-0.875, -0.5)
+shape = SubResource("RectangleShape2D_o6yhb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1036232266]
+position = Vector2(-0.75, -0.5)
+scale = Vector2(0.2382813, 0.1953125)
+texture = ExtResource("2_hdt4y")
+
+[node name="pointA" type="Marker2D" parent="." unique_id=498790095]
+position = Vector2(-101, 0)
+
+[node name="pointB" type="Marker2D" parent="." unique_id=1276749793]
+position = Vector2(0, -2)

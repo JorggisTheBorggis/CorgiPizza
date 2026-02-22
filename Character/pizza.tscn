@@ -1,20 +1,22 @@
 [gd_scene format=3 uid="uid://bdtd7f173qu3y"]
 
-[ext_resource type="Script" uid="uid://cetsbig36pjru" path="res://pizza.gd" id="1_y4erc"]
-[ext_resource type="Texture2D" uid="uid://c7fwedtpxo1i3" path="res://Sprites/Characters/TEMP_tassu.png" id="2_d1rpg"]
+[ext_resource type="Script" uid="uid://cetsbig36pjru" path="res://Objects/pizza.gd" id="1_y4erc"]
+[ext_resource type="Texture2D" uid="uid://b1mndy0uwp011" path="res://Pizza.png" id="2_d1rpg"]
 [ext_resource type="AudioStream" uid="uid://ccijbi57o3qji" path="res://Sounds/Blob.wav" id="3_d1rpg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1aym"]
-radius = 14.035668
+radius = 6.0827627
 
 [node name="PIZZA" type="Area2D" unique_id=435430462]
 script = ExtResource("1_y4erc")
 
 [node name="Slice" type="Sprite2D" parent="." unique_id=1870337095]
+texture_filter = 1
 position = Vector2(0, -2)
 texture = ExtResource("2_d1rpg")
 
 [node name="Blob" type="CollisionShape2D" parent="." unique_id=825002738 groups=["player"]]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_n1aym")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1804782724]

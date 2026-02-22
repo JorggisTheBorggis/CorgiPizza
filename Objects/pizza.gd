@@ -6,7 +6,7 @@ extends Area2D
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		sound.play()
-		shape.disabled = true
+		shape.set_deferred("disabled", true)
 		sprite.visible = false
 		await sound.finished
 		queue_free()

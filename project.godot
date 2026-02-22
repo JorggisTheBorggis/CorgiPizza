@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Borg"
+config/name="Corgis Pizza"
+config/version="0.000000000000001"
 run/main_scene="uid://dbr06rtbpcchv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"

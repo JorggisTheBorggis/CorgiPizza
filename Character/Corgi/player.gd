@@ -1,27 +1,29 @@
 extends CharacterBody2D
 
 # --- PLAYER STATS ---
-@export var max_speed = 350
-@export var acceleration = 500
-@export var friction = 800
-@export var jump_force = -500
-@export var gravity = 1000
-@export var air_control = 0.68
+@export var max_speed: float = 350
+@export var acceleration: float = 500
+@export var friction: float = 800
+@export var turn_friction: float = 1600
+@export var jump_force: float = -500
+@export var gravity: float = 1000
+@export var air_control: float = 0.68
+
 
 # --- COYOTE / BUFFER ---
-@export var coyote_time = 0.12
-@export var jump_buffer_time = 0.12
+@export var coyote_time: float = 0.12
+@export var jump_buffer_time: float = 0.12
 
-var coyote_timer = 0.0
-var jump_buffer_timer = 0.0
+var coyote_timer: float = 0.0
+var jump_buffer_timer: float = 0.0
 
 # --- FALL / JUMP MULTIPLIERS ---
-@export var fall_multiplier = 1.5
-@export var low_jump_multiplier = 2.0
+@export var fall_multiplier: float = 1.5
+@export var low_jump_multiplier: float = 2.0
 
 # --- CAMERA ---
-@export var camera_smooth = 0.01
-@export var camera_lookahead = 0.75
+@export var camera_smooth: float = 0.01
+@export var camera_lookahead: float = 0.75
 
 @onready var cam: Camera2D = $PlayerCamera
 
@@ -54,23 +56,36 @@ func _physics_process(delta):
 
 	# --- MOVEMENT ---
 	if is_on_floor():
+
+		var target_speed = direction * max_speed
+
 		if direction != 0:
-			velocity.x = move_toward(
-				velocity.x,
-				direction * max_speed,
-				acceleration * delta
-			)
+			if sign(direction) != sign(velocity.x) and velocity.x != 0:
+				velocity.x = move_toward(
+					velocity.x,
+					target_speed,
+					turn_friction * delta
+				)
+			else:
+				velocity.x = move_toward(
+					velocity.x,
+					target_speed,
+					acceleration * delta
+				)
 		else:
 			velocity.x = move_toward(
 				velocity.x,
-				0,
+				0.0,
 				friction * delta
 			)
+
 	else:
+		# AIR MOVEMENT
 		if direction != 0:
+			var air_target = direction * max_speed * air_control
 			velocity.x = move_toward(
 				velocity.x,
-				direction * max_speed * air_control,
+				air_target,
 				acceleration * air_control * delta
 			)
 

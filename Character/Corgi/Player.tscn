@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7ewwy01sbrm4"]
 
-[ext_resource type="Script" uid="uid://dev21pp01a63b" path="res://Character/player.gd" id="1_kpjcp"]
-[ext_resource type="Script" uid="uid://dl4hwmjis3jdd" path="res://Character/player_camera.gd" id="2_e80uo"]
+[ext_resource type="Script" uid="uid://dev21pp01a63b" path="res://Character/Corgi/player.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://dl4hwmjis3jdd" path="res://Character/Corgi/player_camera.gd" id="2_e80uo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_schp4"]
 radius = 17.0
@@ -13,6 +13,7 @@ load_path = "res://.godot/imported/Corgi_päähahmo.png-842d884ca930773f1d05a013
 [node name="Player" type="CharacterBody2D" unique_id=1549691030 groups=["player"]]
 floor_snap_length = 5.0
 script = ExtResource("1_kpjcp")
+turn_friction = 900.0
 
 [node name="PlayerCamera" type="Camera2D" parent="." unique_id=57159196]
 z_index = 1
